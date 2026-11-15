@@ -52,4 +52,18 @@
             </plugin>
         </plugins>
     </build>
+    <profiles>
+        <!-- Keep generated files outside OneDrive on Windows. Synced directories
+             can have DOS ReadOnly set, preventing Java from deleting them. -->
+        <profile>
+            <id>windows-local-build</id>
+            <activation>
+                <os><family>Windows</family></os>
+                <property><name>env.LOCALAPPDATA</name></property>
+            </activation>
+            <build>
+                <directory>${env.LOCALAPPDATA}/SE4111/${project.artifactId}/target</directory>
+            </build>
+        </profile>
+    </profiles>
 </project>
