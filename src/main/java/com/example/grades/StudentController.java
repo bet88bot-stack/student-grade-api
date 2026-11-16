@@ -38,7 +38,7 @@ LoggerFactory.getLogger(StudentController.class);
     @GetMapping("/health")
 public Map<String, String> health() {
  logger.info("Health check called");
- return Map.of("status", "UP");
+ return Map.of("status", "Haidar");
 }
 
 }
