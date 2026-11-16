@@ -1,2 +1,7 @@
 target/
 .sonar/
+.idea/
+*.iml
+.vscode/
+*.log
+.DS_Store
